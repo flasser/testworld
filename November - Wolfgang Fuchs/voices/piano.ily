@@ -1,186 +1,10 @@
-%#(set-default-paper-size "a4")
-%#(set-global-staff-size 16)
-
 \version "2.18.2"
 
-\header {
-  title = "November"
-  composer = "Wolfgang Fuchs"
-  instrument = "Piano & Violine"
-}
+\include "../globals.ily"
 
-globalSettings= {
-  \key a \major
-  \time 4/4
-  \tempo 4=66
-  \partial 4
-  \mergeDifferentlyHeadedOn 
-  \mergeDifferentlyDottedOn
-}
-
-violinVoiceI = \relative c' { 
-  %\voiceOne  
-    a'4\rest
-  | fis2 e %1
-  | d2. a'4\rest %2
-  | fis2 e %3
-  | <d fis>2. a'4\rest %4
-  \break
-  | fis2 b, %5
-  | e4 d cis2 %6
-  | d4 cis <b d>2 %7
-  \break
-  | <cis fis>2. r4 %8
-  | fis2 e %9
-  | <d fis>2. r4 %10
-  \break
-  | fis2 e %11
-  | <d fis>2. r4 %12
-  | fis2 b, %13
-  \break
-  | e4 d cis2 %14
-  | d2 <b d>4 <b d>4 %15
-  | a2 gis4 a8 b %16
-  \break
-  | <a cis>4 a <e' b>4 <e b>4 %17
-  | fis2 e %18
-  | d2 cis %19
-  \break
-  | a2 gis4 a8 b %20
-  | <a cis>4 a4 <e' b>4 <e b>4 %21
-  \break
-  | fis2 f2 %22
-  | fis!4 b4 cis2 %23
-  | fis,2 e %24
-  \break
-  | <d fis>2. r4 %25
-  | fis2 e %26
-  \break
-  | <d fis>2. r4 %27
-  | fis2 b2 %28
-  | e,4 d cis2 %29
-  \break
-  | d2 b %30
-  | cis2 cis2 %31
-  | fis2 e %32
-  \break
-  | <d fis>2. r4 %33
-  | fis2 e %34
-  \break
-  | <d fis>2. r4 %35
-  | fis2 <d fis>4 <d fis>4 %36
-  | e4 d <b e>4 <b e>4 %37
-  \break
-  | d2 <b d>4 <b d>4 %38
-  | <a d>4 <a d>4 gis4 a8 b %39
-  \break
-  | <a cis>4 a4 <e' b>4 <e b>4  %40
-  | fis2 e %41
-  | d2 cis %42
-  \break
-  | a2 <d e>4 <d e>4 %43
-  | <a cis>4 a <e' b>4 <e b>4 %44
-  \break
-  | fis2 cis4 cis4 %45
-  | \time 2/4 fis!4 d4 %46
-  | \time 4/4 <b d fis gis>4 <b d fis gis>4 <b d fis gis>4 <b d fis gis>4  %47
-  \break
-  | <b cis eis gis>4 <b cis eis gis>4 <b cis eis gis>4 <b cis eis gis>4 %48
-  | fis'2 e2 %49
-  | <d fis>2. r4 %50
-  \break
-  | fis2 e %51
-  | <d fis>2. r4 %52
-  | fis2 e2 %53
-  \break
-  | <d fis>2. r4 %54
-  | fis2.. cis8 %55
-  | fis2. \fermata s4 %56
-  | \bar "|."
-}
-violinVoiceII = \relative c' { 
-  %\voiceTwo  
-  s4     
-  | cis1 %1  
-  | cis2. r4 %2    
-  | cis1 %3
-  | cis1 %4
-  \break
-  | cis2 d2  %5
-  | b2 cis2  %6
-  | a2 a2  %7
-  \break
-  | gis2. r4 %8
-  | cis2 cis2 %9
-  | cis8 r8 r2. %10
-  \break
-  | cis1 %11
-  | cis8 r8 r2. %12 
-  | cis2 b2 %13        
-  \break
-  | b2 b2 %14
-  | a2 g'2 %15
-  | e2 e2 %16
-  \break
-  | a2 gis %17
-  | d2 d2 %18
-  | a2 b2 %19
-  \break
-  | b2 e2 %20
-  | a2 gis %21
-  \break
-  | d2 cis %22
-  | cis4 d4 b cis %23
-  | cis1 %24
-  \break
-  | cis8 r8 r2. %25
-  | cis1 %26
-  \break
-  | cis8 r8 r2. %27
-  | cis2 <b d>2 %28
-  | b2 b2 %29
-  \break
-  | a2 a2 %30
-  | gis2 gis2 %31
-  | cis1 %32
-  \break
-  | cis8 r8 r2. %33
-  | cis1 %34
-  \break
-  | cis8 r8 r2. %35
-  | cis2 b %36
-  | b2 cis2 %37
-  \break
-  | a2 g2 %38
-  | e2 e2 %39
-  \break
-  | a'2 gis %40
-  | d2 cis2 %41
-  | a2 b2 %42
-  \break
-  | b2 e2 %43
-  | a2 gis %44
-  \break
-  | d2 eis %45
-  | \bar "||" \time 2/4 cis4 b %46
-  | \bar "||" \time 4/4 cis1 %47
-  \break
-  | cis2. cis4 %48
-  | cis1 %49
-  | cis1 %50
-  \break
-  | cis1 %51
-  | cis8 r8 r2. %52
-  | cis1 %53
-  \break
-  | cis8 r8 r2. %54
-  | cis1 %55
-  | cis2. s4 %56
-  | \bar "|."   
-}
-
-pianoTrebleVoiceI = \relative c'' {
-  \voiceOne
+pianoTrebleI = \relative c'' {
+%  \globalSettings
+%  \clef treble
   s16 cis, fis gis
   | a4.cis8 gis4. cis8~ %1
   | <fis, cis'>2. r16 cis fis gis %2
@@ -259,9 +83,11 @@ pianoTrebleVoiceI = \relative c'' {
   | <cis, fis gis a>2.) \fermata s4 %56 
   | \bar "|."  
 }
-pianoTrebleVoiceII = \relative c'' {
-  \voiceTwo
-    s4 
+
+pianoTrebleII = \relative c' {
+%  \globalSettings
+%  \clef treble
+   s4 
   | s1 %1
   | s1 %2
   | a4. cis8 gis4 cis8 cis, %3
@@ -364,8 +190,9 @@ pianoTrebleVoiceII = \relative c'' {
   | \bar "|." 
 }
 
-pianoTrebleVoiceIII = \relative c' {      
-  \voiceFour
+pianoTrebleIII = \relative c' {      
+%  \globalSettings
+%  \clef treble
     s16 cis8.~     
   | cis1~ %1  
   | cis2. s16 cis8.~ %2    
@@ -449,8 +276,9 @@ pianoTrebleVoiceIII = \relative c' {
   | \bar "|."   
 }
 
-pianoBassVoiceI = \relative c { 
-  \voiceOne 
+pianoBassI = \relative c { 
+%  \globalSettings
+%  \clef bass
     s4
   | fis2 e %1
   | d2. c4\rest %2
@@ -531,8 +359,9 @@ pianoBassVoiceI = \relative c {
   | fis2. s4 %56
   | \bar "|."
 }
-pianoBassVoiceII = \relative c { 
-  \voiceTwo
+pianoBassII = \relative c {
+%  \globalSettings
+%  \clef bass
     s4
   | s1 %1
   | s1 %2
@@ -612,44 +441,14 @@ pianoBassVoiceII = \relative c {
   | \bar "|."
 }
 
-violinI = \new Voice {
-  \globalSettings
-  \clef treble
-  \violinVoiceI 
-}
-
-violinII = \new Voice {
-  \globalSettings
-  \clef treble
-  \violinVoiceII
-}
-
 pianoTreble = \new Voice {
   \globalSettings
   \clef treble  
-  << \pianoTrebleVoiceI \\ \pianoTrebleVoiceII \\ \pianoTrebleVoiceIII  >>
+  << \pianoTrebleI \\ \pianoTrebleII \\ \pianoTrebleIII  >>
 }
 
 pianoBass = \new Voice {
   \globalSettings
   \clef bass  
-  << \pianoBassVoiceI \\ \pianoBassVoiceII >>
-}
-
-%\paper {
-%  indent = 0
-%}
-
-\score {  
-<<    
-    \new PianoStaff \with { instrumentName = "Piano" } 
-    {     
-      << \new Staff { \pianoTreble }
-         \new Staff { \pianoBass } 
-      >>     
-    }
-    \new Staff \with { instrumentName = "Violine I" } { \violinI } 
-    \new Staff \with { instrumentName = "Violine II" } { \violinII }
-    
->>
+  << \pianoBassI \\ \pianoBassII >>
 }

@@ -2,7 +2,11 @@
 
 \header {
   title = "November"
+  subtitle = ""
   composer = "Wolfgang Fuchs"
+  opus = ""
+  copyright = #(strftime "%d.%m.%Y" (localtime (current-time)))
+  tagline = \markup { \composer - \subtitle - \title }
   instrument = "Piano & Violine"
 }
 
